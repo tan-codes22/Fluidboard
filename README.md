@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎨 FluidBoard
+# 🎨 WhiteBoard
 
 **A modern, offline-first whiteboard for the web.**
 
