@@ -2,6 +2,8 @@
 
 # 🎨 FluidBoard
 
+Demo Link : https://fluidboard.netlify.app/
+
 **A modern, offline-first whiteboard for the web.**
 
 Sketch ideas, draw diagrams, and jot notes on an infinite canvas — then manage,
