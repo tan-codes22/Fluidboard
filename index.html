@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Primary meta -->
+    <title>FluidBoard — Modern Online Whiteboard</title>
+    <meta
+      name="description"
+      content="FluidBoard is a fast, offline-first whiteboard for sketching ideas, diagrams, and notes. Draw, add shapes and text, manage multiple boards, and export to PNG or PDF — no account needed."
+    />
+    <meta name="author" content="FluidBoard" />
+    <meta name="theme-color" content="#6366f1" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FluidBoard — Modern Online Whiteboard" />
+    <meta
+      property="og:description"
+      content="A fast, offline-first whiteboard for sketching ideas, diagrams, and notes. Built with React, TypeScript, and the Canvas API."
+    />
+    <meta property="og:image" content="/og-image.svg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FluidBoard — Modern Online Whiteboard" />
+    <meta
+      name="twitter:description"
+      content="A fast, offline-first whiteboard for sketching ideas, diagrams, and notes."
+    />
+    <meta name="twitter:image" content="/og-image.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prevent a flash of the wrong theme before React mounts -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('fluidboard:theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (stored !== 'light' && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="h-full">
+    <noscript>You need to enable JavaScript to run FluidBoard.</noscript>
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
